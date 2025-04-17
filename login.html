@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AspireLink – Signin / Signup</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">AspireLink</h1>
+
+    <div class="tabs">
+      <button id="show-login" class="active">Sign In</button>
+      <button id="show-signup">Sign Up</button>
+    </div>
+
+    <div id="login-form" class="form">
+      <input type="email" id="login-email" placeholder="Email" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button onclick="signIn()">Login</button>
+    </div>
+
+    <div id="signup-form" class="form hidden">
+      <input type="text" id="signup-name" placeholder="Full Name" />
+      <input type="email" id="signup-email" placeholder="Email" />
+      <input type="password" id="signup-password" placeholder="Password" />
+      <button onclick="signUp()">Sign Up</button>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
