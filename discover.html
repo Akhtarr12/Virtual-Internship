@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AspireLink – Discover</title>
+  <link rel="stylesheet" href="discover.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+          <div class="nav_logo"><a href="#">ASPIRELINK</a></div>
+          <div class="nav_btns">
+            <button class="btn sign_in" onclick="window.location.href='profile.html'">My Profile</button>
+            <button class="btn sign_up" onclick="logout()">Logout</button>
+          </div>
+        </div>
+      </nav>
+      
+  <main>
+    <div class="discover_container">
+      <h2 id="discoverHeading">Discover Users</h2>
+      <div class="search_box">
+        <input type="text" id="searchInput" placeholder="Search users">
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="usersList" class="users_grid"></div>
+    </div>
+  </main>
+  <script src="discover.js"></script>
+</body>
+</html>
+
+
+
+
