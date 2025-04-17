@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AspireLink – Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav_logo">
+      <a href="#">ASPIRELINK</a>
+    </div>
+    <div class="nav_btns">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="profile_container">
+    <h2>Your Profile</h2>
+
+    <div id="profileDisplay">
+      <p><strong>Name:</strong> <span id="displayName"></span></p>
+      <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+      <p><strong>Role:</strong> <span id="displayRole"></span></p>
+      <p><strong>Interest/Skills:</strong> <span id="displaySkills"></span></p>
+      <p><strong>Bio:</strong> <span id="displayBio"></span></p>
+      <button onclick="editProfile()">Edit Profile</button>
+      <button onclick="goToDiscover()">Go to Discover</button>
+    </div>
+
+    <div id="profileForm" class="hidden">
+      <input type="text" id="name" placeholder="Full Name" />
+      <select id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <select id="role">
+        <option value="">Select Role</option>
+        <option value="Mentor">Mentor</option>
+        <option value="Mentee">Mentee</option>
+      </select>
+      <input type="text" id="skills" placeholder="Interest / Skills" />
+      <textarea id="bio" placeholder="Your bio..."></textarea>
+      <button onclick="saveProfile()">Save</button>
+      <button onclick="cancelEdit()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
 

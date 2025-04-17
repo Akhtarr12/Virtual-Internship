@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav_logo a {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .nav_btns button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile_container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  input, select, textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0.8rem;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background: #1f1f1f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
