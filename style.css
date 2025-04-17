@@ -87,21 +87,34 @@ nav.navbar {
   
   .signup {
     color: white;
-    text-decoration: none;
-    font-size: 16px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+.signup:hover {
+    background-color: white;
+    color: var(--primary-color);
   }
   
   .signin {
     padding: 8px 20px;
-    background-color: white;
-    color: #ff7f3f;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  border: 2px solid white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
   }
   
+  .signin:hover {
+    background-color: var(--primary-color-light);
+    color: white;
+    border-color: var(--primary-color-light);
+  }
 
 .nav_btns .btn {
   padding: 0.5rem 1.2rem;
