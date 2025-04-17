@@ -19,18 +19,27 @@
 
   <div class="profile_container">
     <h2>Your Profile</h2>
-
-    <div id="profileDisplay">
-      <p><strong>Name:</strong> <span id="displayName"></span></p>
-      <p><strong>Gender:</strong> <span id="displayGender"></span></p>
-      <p><strong>Role:</strong> <span id="displayRole"></span></p>
-      <p><strong>Interest/Skills:</strong> <span id="displaySkills"></span></p>
-      <p><strong>Bio:</strong> <span id="displayBio"></span></p>
+  <div id="profileDisplay">
+      <div style="display:flex; align-items:center; gap:1.5rem; margin-bottom:1rem;">
+        <img id="avatarImg" class="profile_avatar" src="default-avatar.png" alt="Avatar" />
+        <div>
+          <p><strong>Name:</strong> <span id="displayName"></span></p>
+          <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+          <p><strong>Role:</strong> <span id="displayRole"></span></p>
+          <p><strong>Interest/Skills:</strong> <span id="displaySkills"></span></p>
+          <p><strong>Bio:</strong> <span id="displayBio"></span></p>
+        </div>
+      </div>
       <button onclick="editProfile()">Edit Profile</button>
       <button onclick="goToDiscover()">Go to Discover</button>
     </div>
-
-    <div id="profileForm" class="hidden">
+  <div id="profileForm" class="hidden">
+      <div style="display:flex; align-items:center; gap:1.5rem; margin-bottom:1rem;">
+        <label for="avatarInput" style="cursor:pointer;">
+          <img id="avatarPreview" class="profile_avatar" src="default-avatar.png" alt="Avatar" title="Click to change avatar" />
+        </label>
+        <input type="file" id="avatarInput" accept="image/*" style="display:none;" />
+      </div>
       <input type="text" id="name" placeholder="Full Name" />
       <select id="gender">
         <option value="">Select Gender</option>
@@ -48,6 +57,7 @@
       <button onclick="cancelEdit()">Cancel</button>
     </div>
   </div>
+  
 
   <script src="profile.js"></script>
 </body>

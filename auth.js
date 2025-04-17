@@ -13,8 +13,8 @@ document.getElementById("show-login").onclick = () => {
   };
   
   function signUp() {
-    const name = document.getElementById("signup-name").value;
-    const email = document.getElementById("signup-email").value;
+    const name = document.getElementById("signup-name").value.trim();
+    const email = document.getElementById("signup-email").value.trim().toLowerCase();
     const password = document.getElementById("signup-password").value;
   
     if (!name || !email || !password) return alert("Please fill all fields.");
@@ -32,7 +32,7 @@ document.getElementById("show-login").onclick = () => {
   }
   
   function signIn() {
-    const email = document.getElementById("login-email").value;
+    const email = document.getElementById("login-email").value.trim().toLowerCase();
     const password = document.getElementById("login-password").value;
   
     const users = JSON.parse(localStorage.getItem("users")) || [];
