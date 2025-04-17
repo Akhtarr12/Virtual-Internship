@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #ff833e;
+  --primary-color-light: #ffb86b;
+  --primary-color-dark: #db6f35;
+  --text-dark: #1f1f1f;
+  --text-light: #6f6f6f;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: 'Bebas Neue', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+  padding-top: 80px; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav_logo a {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    color: #1f1f1f;  
+    font-weight: 700;
+      
+}
+
+.nav_btns {
+  display: flex;
+  gap: 1rem;
+}
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:#ff7f3f;
+    padding: 1rem 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .signup {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .signin {
+    padding: 8px 20px;
+    background-color: white;
+    color: #ff7f3f;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+
+.nav_btns .btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.sign_up {
+  background: transparent;
+  border: 1.5px solid white;
+  color: white;
+}
+
+.sign_in {
+  background: white;
+  color: var(--primary-color);
+}
+
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 3rem 3rem;
+  max-width: var(--max-width);
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.header_content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.header_content h1 {
+  font-family: var(--header-font);
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.header_content h1 span {
+  color: var(--primary-color);
+}
+
+.header_content p {
+  margin: 1rem 0 2rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.register_cta {
+    margin-top: 2rem;
+  }
+  
+  .register_btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .register_btn:hover {
+    background-color: var(--primary-color-dark);
+  }
+  
+
+.header_image {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.header_image_card {
+  position: absolute;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.header_image_card span {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.card-top-left {
+  top: -10px;
+  left: -40px;
+}
+
+.card-top-right {
+  top: 0;
+  right: -40px;
+}
+
+.card-bottom-left {
+  bottom: 30px;
+  left: -30px;
+}
+
+.card-bottom-right {
+  bottom: 0;
+  right: -30px;
+}
+
+
+footer {
+  background-color: var(--primary-color-dark);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header_container {
+    flex-direction: column-reverse;
+    padding: 7rem 1.5rem 2rem;
+  }
+
+  .header_content h1 {
+    font-size: 2.5rem;
+  }
+
+  .header_image {
+    margin-bottom: 2rem;
+  }
+
+  .search_box {
+    flex-direction: column;
+  }
+
+  .header_image_card {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+  }
+}
+
+
