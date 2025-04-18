@@ -1,22 +1,22 @@
 # Virtual-Internship
-AspireLink - Mentor-Mentee matching platform
+## AspireLink - Mentor-Mentee matching platform
 AspireLink is a mentor-mentee matching platform designed to connect learners with experienced professionals. The platform allows users to create profiles, discover potential mentors or mentees based on their role, and send connection requests.
-Deployed URL
-https://aspirelink.vercel.app
-Technologies Used
 
+## Deployed URL
+https://aspirelink.vercel.app
+
+## Technologies Used
 HTML5
 CSS3
 JavaScript (Vanilla)
 Local Storage for data persistence
 
-Setup Instructions
+## Setup Instructions
 Prerequisites
-
 A modern web browser (Chrome, Firefox, Safari, Edge)
 A code editor (VS Code, Sublime Text, etc.)
 
-Installation
+## Installation
 
 Clone the repository:
 
@@ -42,8 +42,7 @@ http-server
 
 Visit http://localhost:8080 in your browser.
 
-Features
-
+## Features
 User authentication (sign up/sign in)
 Profile creation and management
 Role-based user experience (Mentor/Mentee)
@@ -51,10 +50,10 @@ Discover potential mentors or mentees
 Connection request system
 Responsive design for all devices
 
-Configuration
+## Configuration
 The application uses LocalStorage for data persistence. No additional configuration is required to run the application locally.
-Project Structure
 
+## Project Structure
 index.html - Landing page
 login.html - User authentication page
 profile.html - User profile management
