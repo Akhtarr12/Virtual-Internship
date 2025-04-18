@@ -125,18 +125,37 @@ const mentees = [
 ];
 
 const currentUser = JSON.parse(localStorage.getItem("currentUser")) || {};
-const userRole = currentUser.role || "Mentee"; 
+console.log("Current user:", currentUser);
 
-const showRole = userRole === "Mentee" ? "Mentor" : "Mentee";
-
-document.getElementById("discoverHeading").textContent = `Discover ${showRole}s`;
-document.getElementById("searchInput").placeholder = `Search in the world of ${showRole.toLowerCase()}s`;
+let usersToShow = [];
+let oppositeRoleLabel = "";
 
 
-let allUsers = showRole === "Mentor" ? mentors : mentees;
-let filteredUsers = allUsers.slice();
+if (currentUser.role === "Mentor") {
+  usersToShow = mentees;
+  oppositeRoleLabel = "Mentee";
+  console.log("User is a Mentor, showing Mentees");
+} 
 
+else if (currentUser.role === "Mentee") {
+  usersToShow = mentors;
+  oppositeRoleLabel = "Mentor";
+  console.log("User is a Mentee, showing Mentors");
+}
+else {
+  usersToShow = mentors;  
+  oppositeRoleLabel = "Mentor";
+  console.log("User role not recognized, defaulting to show Mentors");
+}
 
+console.log("User role:", currentUser.role);
+console.log("Showing role:", oppositeRoleLabel);
+console.log("Users to display count:", usersToShow.length);
+
+document.getElementById("discoverHeading").textContent = `Discover ${oppositeRoleLabel}s`;
+document.getElementById("searchInput").placeholder = `Search in the world of ${oppositeRoleLabel.toLowerCase()}s`;
+
+let filteredUsers = usersToShow.slice();
 const itemsPerPage = 4;
 let currentPage = 1;
 let totalPages = Math.ceil(filteredUsers.length / itemsPerPage);
@@ -153,12 +172,10 @@ function renderUsers(users, page = 1) {
     return;
   }
   
- 
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, users.length);
   const paginatedUsers = users.slice(startIndex, endIndex);
-  
- 
+
   document.getElementById("prevBtn").disabled = page <= 1;
   document.getElementById("nextBtn").disabled = page >= Math.ceil(users.length / itemsPerPage);
   document.getElementById("pageInfo").textContent = `Page ${page} of ${Math.ceil(users.length / itemsPerPage)}`;
@@ -212,7 +229,6 @@ function sendConnectionRequest(userId, button) {
   alert("Connection request sent!");
 }
 
-
 document.getElementById("prevBtn").addEventListener("click", function() {
   if (currentPage > 1) {
     currentPage--;
@@ -230,9 +246,9 @@ document.getElementById("nextBtn").addEventListener("click", function() {
 document.getElementById("searchBtn").addEventListener("click", function() {
   const term = document.getElementById("searchInput").value.trim().toLowerCase();
   if (!term) {
-    filteredUsers = allUsers.slice();
+    filteredUsers = usersToShow.slice();
   } else {
-    filteredUsers = allUsers.filter(user =>
+    filteredUsers = usersToShow.filter(user =>
       user.name.toLowerCase().includes(term) ||
       user.skills.toLowerCase().includes(term) ||
       user.bio.toLowerCase().includes(term)
@@ -241,7 +257,6 @@ document.getElementById("searchBtn").addEventListener("click", function() {
   currentPage = 1; 
   renderUsers(filteredUsers, currentPage);
 });
-
 
 document.getElementById("searchInput").addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
