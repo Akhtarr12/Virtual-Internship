@@ -3,7 +3,7 @@
 AspireLink is a mentor-mentee matching platform designed to connect learners with experienced professionals. The platform allows users to create profiles, discover potential mentors or mentees based on their role, and send connection requests.
 
 ## Deployed URL
-https://aspirelink.vercel.app
+https://aspirelink.netlify.app/
 
 ## Technologies Used
 - HTML5
@@ -20,7 +20,7 @@ https://aspirelink.vercel.app
 
 - Clone the repository:
 
-- git clone https://github.com/yourusername/Virtual-Internship.git
+- git clone https://github.com/Akhtarr12/Virtual-Internship.git
 
 - Navigate to the project directory:
 
