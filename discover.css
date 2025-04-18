@@ -17,6 +17,33 @@ body {
   background-color: var(--white);
   padding-top: 80px;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  color: #999;
+}
+
+#pageInfo {
+  font-weight: bold;
+}
 
 .discover_container {
   max-width: var(--max-width);
